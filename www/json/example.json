@@ -1,0 +1,26 @@
+[
+  {
+    "id": "peter-mueller",
+    "firstName": "Peter",
+    "lastName": "Müller",
+    "gender": "male",
+    "birthDate": "1971-01-01",
+    "deathDate": null,
+    "fatherId": "max-mueller",
+    "motherId": "marie-mueller"
+  },
+  {
+    "id": "max-mueller",
+    "firstName": "Max",
+    "midName": "Moritz",
+    "lastName": "Müller",
+    "birthDate": "1940-01-01"
+  },
+  {
+    "id": "marie-mueller",
+    "firstName": "Marie",
+    "midName": "Marta",
+    "lastName": "Müller",
+    "birthDate": "1939-01-01"
+  }
+]

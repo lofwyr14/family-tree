@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schnurpfeil.de/schemas/stammbaum.schema.json",
+  "title": "PersonList",
+  "type": "array",
+  "items": { "$ref": "#/$defs/person" },
+  "$defs": {
+    "personId": {
+      "type": ["string"],
+      "pattern": "^[a-z]+(?:-[a-z]+)*$"
+    },
+    "date": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female", "other", "unknown"]
+    },
+    "person": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z]+(?:-[a-z]+)*$"
+        },
+        "firstName": { "type": ["string", "null"] },
+        "midName": { "type": ["string", "null"] },
+        "lastName": { "type": ["string", "null"] },
+        "gender": { "$ref": "#/$defs/gender" },
+        "birthDate": { "$ref": "#/$defs/date" },
+        "deathDate": { "$ref": "#/$defs/date" },
+        "fatherId": { "$ref": "#/$defs/personId" },
+        "motherId": { "$ref": "#/$defs/personId" }
+      }
+    }
+  }
+}
